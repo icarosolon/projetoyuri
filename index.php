@@ -16,37 +16,16 @@ $u = new usuario;
         <h1>Entrar</h1>
         <form method="post" action="autentica.php">
 
-            <input type="email" name="email" placeholder="Usuário" />
-            <input type="password" name="senha" placeholder="Senha" />
-            <input type="submit" value="ACESSAR" />
+            <input class="input-login" type="email" name="email" placeholder="Usuário" maxlength="50" minlength="5" required />
+            <input class="input-login" type="password" name="senha" placeholder="Senha" required />
+            <input class="input-login" type="submit" value="ACESSAR" />
             <a href="cadastrar.php">Ainda não é inscrito?<strong>Cadastre-se!</strong></a>
         </form>
     </div>
-    <?php
-    if (isset($_POST['email'])) {
-        $email = addslashes($_POST['email']);
-        $senha = addslashes($_POST['senha']);
 
-        if (!empty($email) && !empty($senha)) {
-            $u->conectar("projeto_web", "localhost", "root", "");
-            if ($u->msgErro == "") {
-            }
-            if ($u->logar($email, $senha)) {
-                header("location: telainicio.php");
-            } else {
-
-                echo "Email e/ou senha estão incorretos!";
-            }
-        } else {
-
-            echo "Erro:" . $u->msgErro;
-        }
-    } else {
-        echo "Preencha todos os campos!";
-    }
+    <?php ?>
 
 
-    ?>
 </body>
 
 </html>

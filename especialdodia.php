@@ -12,10 +12,10 @@ $up = new usuario_prato;
     <head>
         <title>Prato especial | Nordestina</title>
         <meta charset="UTF-8" />
-        <link href="style.css" rel="stylesheet" type="text/css" />
         <?php
         include("verificaSessao.php");
         ?>
+        <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>

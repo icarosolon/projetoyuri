@@ -4,10 +4,10 @@
     <head>
         <title>Quem somos | Nordestina</title>
         <meta charset="UTF-8" />
-        <link href="style.css" rel="stylesheet" type="text/css" />
         <?php
         include("verificaSessao.php");
         ?>
+        <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
