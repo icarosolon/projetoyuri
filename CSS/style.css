@@ -124,7 +124,15 @@ img.displayed {
   background-color: rgba(255, 255, 255, 0.01);
   color: white;
 }
-
+.fundo-branco {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #7e8a97;
+}
 .input-prato {
   display: block;
   --height: 55px;

@@ -41,24 +41,27 @@ $pratos = mysqli_query($con, $sql);
 
         </form>
 
+        <br><br>
+        <h1>~~ Pratos Cadastrados ~~</h1>
 
         <div class="fundo-branco">
             <table>
                 <tr>
-                    <th>
-                        <h3>
-                            Nome
+                    <th style="width: 20%;">
+                        <h2>
+                            <strong>Nome</strong>
+                        </h2>
                     </th>
                     </h3>
-                    <th>
-                        <h3>
-                            descrição
-                        </h3>
+                    <th style="width: 70%;">
+                        <h2>
+                            <strong>Descrição</strong>
+                        </h2>
                     </th>
-                    <th>
-                        <h3>
-                            Botões
-                        </h3>
+                    <th style="width: 10%;">
+                        <h2>
+                            <strong>Botões</strong>
+                        </h2>
                     </th>
                 </tr>
                 <?php
