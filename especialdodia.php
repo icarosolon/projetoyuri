@@ -35,7 +35,6 @@ $pratos = mysqli_query($con, $sql);
 
             <input class="input-prato" name="nome_do_prato" type="text" placeholder="Nome do prato" maxlenght="40" />
             <input class="input-prato" name="inf_prato" type="text" placeholder="informações sobre o prato" maxlenght="500" />
-
             <input class="input-prato" type="file" name="imagem" id="imagem" />
 
             <input class="input-prato" type="submit" value="Cadastrar" />
