@@ -1,7 +1,11 @@
 <?php
 
-require_once 'CLASSES/usuario_prato.php';
-$up = new usuario_prato;
+//require_once 'CLASSES/usuario_prato.php';
+//$up = new usuario_prato;
+//include("verificaSessao.php");
+require_once "conectar.php";
+$sql = "SELECT * FROM PRATOS";
+$pratos = mysqli_query($con, $sql);
 
 ?>
 
@@ -23,54 +27,68 @@ $up = new usuario_prato;
         <?php include("cabecalho.php"); //cabeçalho
         ?>
 
-        
+
         <h1>Informe qual prato deseja que seja adicionado ao nosso cardápio!</h1>
-         
-        
-            <form method="POST" action="" enctype="multipart/form-data">
-            
-                <input class="input-prato" type="text" placeholder="Nome do prato" maxlenght="40" />
-                <input class="input-prato" type="text" placeholder="informações sobre o prato" maxlenght="500" />
-
-                <input class="input-prato" type="file" name="imagem" id="imagem"/>
-
-                <input class="input-prato" type="submit" value="Cadastrar" />
-            
-            </form>
-        
-        
-        <?php
-        //verificar se clicou no botão
-        if (isset($_POST['nome_do_prato'])) {
-            $nome_do_prato = addslashes($_POST['nome_do_prato']);
-            $inf_prato = addslashes($_POST['inf_prato']);
-            $img_prato = addslashes($_POST['img_prato']);
-            //verificar se esta preenchido
-            if (!empty($nome_do_prato) && !empty($inf_prato) && !empty($img_prato)) {
-                $u->conectar("projeto_web", "localhost", "root", "");
-                if ($u->msgErro == "") {
-
-                    if ($u->cadastrar($nome_do_prato, $inf_prato, $img_prato)) {
-                        echo "Prato cadastrado com sucesso!";
-                    } else {
-                        echo "Nome já cadastrado!";
-                    }
-                } else {
-                    echo "Erro: " . $u->msgErro;
-                }
-            } else {
-                echo "Preencha todos os campos!";
-            }
-        }
 
 
-        ?>
+        <form method="POST" action="cadastrarPrato.php" enctype="multipart/form-data">
+
+            <input class="input-prato" name="nome_do_prato" type="text" placeholder="Nome do prato" maxlenght="40" />
+            <input class="input-prato" name="inf_prato" type="text" placeholder="informações sobre o prato" maxlenght="500" />
+
+            <input class="input-prato" type="file" name="imagem" id="imagem" />
+
+            <input class="input-prato" type="submit" value="Cadastrar" />
+
+        </form>
 
 
+        <div class="fundo-branco">
+            <table>
+                <tr>
+                    <th>
+                        <h3>
+                            Nome
+                    </th>
+                    </h3>
+                    <th>
+                        <h3>
+                            descrição
+                        </h3>
+                    </th>
+                    <th>
+                        <h3>
+                            Botões
+                        </h3>
+                    </th>
+                </tr>
+                <?php
 
+                foreach ($pratos as $prato) { ?>
+
+                    <tr>
+                        <td>
+                            <h3>
+                                <?php
+                                echo $prato['nome_do_prato'];
+                                ?>
+                            </h3>
+                        </td>
+                        <td>
+                            <h3>
+                                <?php
+                                echo $prato['inf_prato'];
+                                ?>
+                                <h3>
+                        </td>
+                        <td>
+                            <?php echo "<a href='editarPrato.php?id_prato=" . $prato['id_prato'] . "' ><button>Editar</button></a>"; ?>
+                            <?php echo "<a href='excluirPrato.php?id_prato=" . $prato['id_prato'] . "' onclick=\"return confirm('Tem certeza que deseja excluir este prato?');\"><button>Excluir</button></a>"; ?>
+                        </td>
+                    </tr> <?php } ?>
+            </table>
+        </div>
     </body>
-
-
     <footer id="rodape">
 
         <table>

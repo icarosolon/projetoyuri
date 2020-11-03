@@ -29,7 +29,7 @@ class usuario_prato
         }
         else//caso não exista
         {
-            $sql = $pdo->prepare("INSERT INTO usuarios (nome_do_prato, inf_prato) VALUES (:np, :ip, :imp)");
+            $sql = $pdo->prepare("INSERT INTO usuarios (nome_do_prato, inf_prato, imagem) VALUES (:np, :ip, :imp)");
             $sql->bindValue(":np",$nome_do_prato);
             $sql->bindValue(":ip",$inf_prato);
             $sql->bindValue(":imp", $img_prato);
@@ -38,4 +38,3 @@ class usuario_prato
         }
         
     }}
-?>
