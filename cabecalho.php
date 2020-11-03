@@ -41,7 +41,7 @@
                     <i class="fas fa-pepper-hot">
                         <span class="badge badge-success">1</span>
                     </i>
-                    Especial do Dia
+                    Gerenciamento de Pratos
                 </a>
             </li>
             <li class="nav-item">

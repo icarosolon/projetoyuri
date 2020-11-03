@@ -14,7 +14,7 @@ $pratos = mysqli_query($con, $sql);
     <html lang="pt-br">
 
     <head>
-        <title>Prato especial | Nordestina</title>
+        <title>Gerenciamento de pratos | Nordestina</title>
         <meta charset="UTF-8" />
         <?php
         include("verificaSessao.php");

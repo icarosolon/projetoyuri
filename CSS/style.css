@@ -1,128 +1,141 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-h1{
-    font-family: cursive;
-    text-align: center;
-    font-size: 30pt;
-    color: #58182b;
-    text-shadow: 2px 2px 2px #a59797;
+h1 {
+  font-family: cursive;
+  text-align: center;
+  font-size: 30pt;
+  color: #58182b;
+  text-shadow: 2px 2px 2px #a59797;
 }
-h2{
-    font-family: sans-serif;
-    text-align: center;
-    font-size: 20pt;
-    color: #D1920D;
+h2 {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 20pt;
+  color: #d1920d;
 }
-h3{
-    font-family: Josefin Sans;
-    font-size: 12pt;
-    color: #E3BE6D;
-    text-align: center;
-}
-
-header{
-    background-color: white;
-    width:auto;
-    
-}
-a{
-    right: 200
-}
-body{
-    background-image: url('../Nordestina/cook-366875_1280.jpg');
-    background-attachment: fixed;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: black;
-}
-#botao{ text-align: absolute }
-.botaoenviar{
-    width: 350px;
-    text-align: absolute;
-    left: 100%;
-    top: 100%;
-    margin: 150px auto 0px auto;
-    padding: 0;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    background-color: #D1920D;
-    font-size: 18px;
-}
-#cabecalho{
-    background: black;
+h3 {
+  font-family: Josefin Sans;
+  font-size: 12pt;
+  color: #e3be6d;
+  text-align: center;
 }
 
-#logoimg{
-    padding-top: 30px;
-    height: 50px;
-    background-color: transparent;
-    margin-top:10px;
-    margin-left: 20px;
+header {
+  background-color: white;
+  width: auto;
 }
-#menu ul{
-    margin: 0;
-    background-color: black;
-    list-style: none;
+a {
+  right: 200;
 }
-#menu ul li{
-    display: inline;
+body {
+  background-image: url("../Nordestina/cook-366875_1280.jpg");
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: black;
 }
-#menu ul li a{
-    padding: 10px 10px;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    color: #5B2434;
+#botao {
+  text-align: absolute;
 }
-#menu ul li a:hover{
-    color: #D1920D;
+.botaoenviar {
+  width: 350px;
+  text-align: absolute;
+  left: 100%;
+  top: 100%;
+  margin: 150px auto 0px auto;
+  padding: 0;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: #d1920d;
+  font-size: 18px;
 }
-
-#rodape{
-    padding-top: 10px;
-    margin: 20px;
-    background-color: black;
-    height: 150px;
-    line-height: 10px;
-    text-align: center;
-    clear: both;
-    font-size: 11px;
-    font-weight: bold;
-    font-style: italic;
-    color: white;
-    display: flex;
-    justify-content: space-around;
+#cabecalho {
+  background: black;
 }
 
-#rodapeimg{
-    padding-top: 5px;
-    width: 110px;
-    left: 20%;
-    top: 20%;
-    margin-left:10px;
-    margin-top:10px;
+#logoimg {
+  padding-top: 30px;
+  height: 50px;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#menu ul {
+  margin: 0;
+  background-color: black;
+  list-style: none;
+}
+#menu ul li {
+  display: inline;
+}
+#menu ul li a {
+  padding: 10px 10px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  color: #5b2434;
+}
+#menu ul li a:hover {
+  color: #d1920d;
+}
+
+#rodape {
+  padding-top: 10px;
+  margin: 20px;
+  background-color: black;
+  height: 150px;
+  line-height: 10px;
+  text-align: center;
+  clear: both;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+#rodapeimg {
+  padding-top: 5px;
+  width: 110px;
+  left: 20%;
+  top: 20%;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 img.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
- 
+
+.input-area {
+  display: block;
+
+  width: 700px;
+  margin: 30px auto 0px auto;
+  border-radius: 30px;
+  border: 1px solid black;
+  font-size: 16pt;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.01);
+  color: white;
+}
 
 .input-prato {
-    display: block;
-    height: 55px;
-    width: 700px;
-    margin: 30px auto 0px auto;
-    border-radius: 30px;
-    border: 1px solid black;
-    font-size: 16pt;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.01);
-    color: white;
+  display: block;
+  --height: 55px;
+  width: 700px;
+  margin: 30px auto 0px auto;
+  border-radius: 30px;
+  border: 1px solid black;
+  font-size: 16pt;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.01);
+  color: white;
 }
 input[type="submit"] {
   background-color: #d1920d;
