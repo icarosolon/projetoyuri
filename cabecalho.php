@@ -47,7 +47,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="quemsomos.php">
                     <i class="fa fa-envelope-o">
-                        <span class="badge badge-info">5</span>
+                        <span class="badge badge-info"></span>
                     </i>
                     Quem somos
                 </a>

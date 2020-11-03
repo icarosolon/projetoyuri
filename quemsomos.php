@@ -7,7 +7,7 @@
         <?php
         include("verificaSessao.php");
         ?>
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -41,7 +41,7 @@
             <div>
                 <h3>Acesse o nosso instagram</h3>
                 <h3>para acompanhar os novos pratos e promoções</h3>
-                <h3><a href="https://www.instagram.com/yuri958/"> @YURI958</a> </h3>
+                <h3><a href="https://www.instagram.com/yuri958/"> @Yuri958</a> </h3>
             </div>
 
         </table>

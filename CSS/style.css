@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 h1{
     font-family: cursive;
     text-align: center;
@@ -27,7 +31,7 @@ a{
     right: 200
 }
 body{
-    background-image: url('Nordestina/cook-366875_1280.jpg');
+    background-image: url('../Nordestina/cook-366875_1280.jpg');
     background-attachment: fixed;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -80,7 +84,7 @@ body{
     padding-top: 10px;
     margin: 20px;
     background-color: black;
-    height: 120px;
+    height: 150px;
     line-height: 10px;
     text-align: center;
     clear: both;
@@ -92,9 +96,8 @@ body{
     justify-content: space-around;
 }
 
-}
 #rodapeimg{
-    padding-top: 10px;
+    padding-top: 5px;
     width: 110px;
     left: 20%;
     top: 20%;
@@ -105,4 +108,23 @@ body{
 img.displayed {
     display: block;
     margin-left: auto;
-    margin-right: auto }
+    margin-right: auto;
+}
+ 
+
+.input-prato {
+    display: block;
+    height: 55px;
+    width: 700px;
+    margin: 30px auto 0px auto;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-size: 16pt;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+    color: white;
+}
+input[type="submit"] {
+  background-color: #d1920d;
+  border: none;
+}

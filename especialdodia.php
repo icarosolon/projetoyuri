@@ -15,7 +15,7 @@ $up = new usuario_prato;
         <?php
         include("verificaSessao.php");
         ?>
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -23,30 +23,34 @@ $up = new usuario_prato;
         <?php include("cabecalho.php"); //cabeçalho
         ?>
 
-
+        
         <h1>Informe qual prato deseja que seja adicionado ao nosso cardápio!</h1>
+         
+        
+            <form method="POST" action="" enctype="multipart/form-data">
+            
+                <input class="input-prato" type="text" placeholder="Nome do prato" maxlenght="40" />
+                <input class="input-prato" type="text" placeholder="informações sobre o prato" maxlenght="500" />
 
-        <form method="POST" action="" enctype="multipart/form-data">
+                <input class="input-prato" type="file" name="imagem" id="imagem"/>
 
-            <input type="text" placeholder="Nome do prato" maxlenght="40" />
-            <input type="text" placeholder="informações sobre o prato" maxlenght="500" />
-
-            <input type="file" name="imagem" id="imagem">
-
-            <input type="submit" value="Cadastrar" />
-
-        </form>
+                <input class="input-prato" type="submit" value="Cadastrar" />
+            
+            </form>
+        
+        
         <?php
         //verificar se clicou no botão
         if (isset($_POST['nome_do_prato'])) {
             $nome_do_prato = addslashes($_POST['nome_do_prato']);
             $inf_prato = addslashes($_POST['inf_prato']);
+            $img_prato = addslashes($_POST['img_prato']);
             //verificar se esta preenchido
-            if (!empty($nome_do_prato) && !empty($inf_prato)) {
+            if (!empty($nome_do_prato) && !empty($inf_prato) && !empty($img_prato)) {
                 $u->conectar("projeto_web", "localhost", "root", "");
                 if ($u->msgErro == "") {
 
-                    if ($u->cadastrar($nome_do_prato, $inf_prato)) {
+                    if ($u->cadastrar($nome_do_prato, $inf_prato, $img_prato)) {
                         echo "Prato cadastrado com sucesso!";
                     } else {
                         echo "Nome já cadastrado!";
@@ -84,7 +88,7 @@ $up = new usuario_prato;
             <div>
                 <h3>Acesse o nosso instagram</h3>
                 <h3>para acompanhar os novos pratos e promoções</h3>
-                <h3><a href="https://www.instagram.com/yuri958/"> @YURI958</a> </h3>
+                <h3><a href="https://www.instagram.com/yuri958/"> @Yuri958</a> </h3>
             </div>
 
         </table>
