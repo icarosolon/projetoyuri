@@ -13,7 +13,8 @@
         $pratos = mysqli_query($con, $sql);
         ?>
         <link href="CSS/style.css" rel="stylesheet" type="text/css" />
-
+        <link href="CSS/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/album.css" rel="stylesheet" type="text/css" />
 
 
     </head>
@@ -21,58 +22,76 @@
     <body>
         <?php include("cabecalho.php"); //cabeçalho
         ?>
-
         <h1>Nordestina,</h1>
         <h1>do jeitinho que você gosta!</h1>
-        
 
-        <h3>O Nordeste é uma das regiões do Brasil que são extremamente ricas em cultura, belezas naturais e principalmente em iguarias e diversidades gastronômicas. Seja no Maranhão, Piauí, Ceará, Pernambuco, Bahia, Rio Grande do Norte, Paraíba ou Alagoas, todos esses estados nordestinos possuem pratos típicos com modos de preparos diversificados, o que proporciona um turbilhão de sabores no prato nordestino que merecem ser apreciados seja para quem mora em estados vizinhos ou por viajantes de todas as partes do mundo.</h3>
-        <img src="Nordestina/farofa-de-cuscuz.jpg" />
-
-        <h3>Os cozinheiros da região são conhecidos pela “mão cheia” e principalmente por externar que o segredo do resultado espetacular é preparar com muito amor. Para deixar você por dentro do que encontrará nos restaurantes das cidades do Nordeste, apresentamos 10 pratos típicos sensacionais que você precisa saborear quando estiver nestas terras.</h3>
+        <h3>O Nordeste é uma das regiões do Brasil que são extremamente ricas em cultura,
+            belezas naturais e principalmente em iguarias e diversidades gastronômicas.
+            Seja no Maranhão, Piauí, Ceará, Pernambuco, Bahia, Rio Grande do Norte,
+            Paraíba ou Alagoas, todos esses estados nordestinos possuem pratos típicos com
+            modos de preparos diversificados, o que proporciona um turbilhão de sabores no
+            prato nordestino que merecem ser apreciados seja para quem mora em estados vizinhos
+            ou por viajantes de todas as partes do mundo. Os cozinheiros da região são conhecidos
+            pela “mão cheia” e principalmente por externar que o segredo do resultado espetacular
+            é preparar com muito amor. Para deixar você por dentro do que encontrará nos restaurantes
+            das cidades do Nordeste, apresentamos 10 pratos típicos sensacionais que você
+            precisa saborear quando estiver nestas terras.</h3>
 
         <br>
         <br>
         <h1>~~ Nossos Pratos ~~</h1>
         <br>
         <br>
-        <table>
-            <?php
-            foreach ($pratos as $prato) { ?>
-                <tr>
-                    <td>
-                        <h2>
-                            <?php
-                            echo $prato['nome_do_prato'];
-                            ?>
-                        </h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3>
-                            <?php
-                            echo $prato['inf_prato'];
-                            ?>
-                        </h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="<?php
-                                    echo $prato['imagem'];
-                                    ?>" alt="<?php
-                                                $prato['nome_do_prato'];
-                                                ?>" />
-                    </td>
-                </tr>
-            <tr>
-                <td>
-                    <br><br>
-                </td>
-            </tr>
-            <?php } ?>
-        </table>
+        <div class="container">
+
+            <div class="row">
+
+                <?php
+                foreach ($pratos as $prato) { ?>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <title><?php
+                                        echo $prato['nome_do_prato'];
+                                        ?></title>
+
+                                <rect x="0" y="0" width="150%" height="150%" fill="#55595c" />
+                                <image class="img-responsiva" xlink:href="<?php
+                                                                            echo $prato['imagem'];
+                                                                            ?>" alt="<?php
+                                                                                        $prato['nome_do_prato'];
+                                                                                        ?>" />
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text"><strong><?php echo $prato['nome_do_prato']; ?></strong></p>
+                                <p><?php
+                                    echo $prato['inf_prato'];
+                                    ?></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <?php echo "<a href='editarPrato.php?id_prato=" . $prato['id_prato'] . "' ><button type='button' class='btn btn-sm btn-outline-secondary'>Editar</button></a>"; ?>
+                                        <?php echo "<a href='excluirPrato.php?id_prato=" . $prato['id_prato'] . "' onclick=\"return confirm('Tem certeza que deseja excluir este prato?');\"><button type='button' class='btn btn-sm btn-outline-secondary'>Remover</button></a>"; ?>
+                                    </div>
+                                    <small class="text-muted"><?php echo $prato['id_prato']; ?>° mais pedido</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php } ?>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
 
         <footer id="rodape">
 

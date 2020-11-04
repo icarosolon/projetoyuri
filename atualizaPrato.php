@@ -22,4 +22,4 @@ if (!empty($inf_prato)) {
 
 
 echo "<script>alert('Cadastro Atualizado!');</script>";
-//echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=especialdodia.php">';
+echo '<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=especialdodia.php">';
